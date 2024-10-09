@@ -11,11 +11,11 @@ int output(int **matrix, int M, int N);
 
 int main()
 {
-	printf("Enter the size of the matrix:\n");
+	//printf("Enter the size of the matrix:\n");
 	read_size(&M, &N);
-	printf("Enter the matrix:\n");
+	//printf("Enter the matrix:\n");
 	read_matrix(&matrix, M, N);
-	printf("Your matrix:\n");
+	//printf("Your matrix:\n");
 	output(matrix, M, N);
 	return 0;
 }
