@@ -11,11 +11,11 @@ int output(int **matrix, int M, int N);
 
 int main()
 {
-	//printf("Enter the size of the matrix:\n");
+	// printf("Enter the size of the matrix:\n");
 	read_size(&M, &N);
-	//printf("Enter the matrix:\n");
+	// printf("Enter the matrix:\n");
 	read_matrix(&matrix, M, N);
-	//printf("Your matrix:\n");
+	// printf("Your matrix:\n");
 	output(matrix, M, N);
 	return 0;
 }
@@ -27,7 +27,7 @@ int read_size(int *M, int *N)
 
 int read_matrix(int ***matrix, int M, int N)
 {
-	*matrix = (int**)malloc(sizeof(int*) * M);
+	*matrix = (int **)malloc(sizeof(int *) * M);
 	for (int i = 0; i < M; i++)
 		(*matrix)[i] = malloc(sizeof(int) * N);
 	for (int i = 0; i < M; i++)
@@ -45,13 +45,13 @@ int output(int **matrix, int M, int N)
 		for (int j = 0; j < N; j++)
 		{
 			printf("%d", matrix[i][j]);
+			if ((j + 1) < N)
+			{
+				printf(" ");
+			}
 			if ((i + 1) < M)
 			{
-				if ((j + 1) < N)
-				{
-					printf(" ");
-				}
-				else if ((j + 1) == N)
+				if ((j + 1) == N)
 				{
 					printf("\n");
 				}
